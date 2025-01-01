@@ -60,6 +60,7 @@ public class StaticGenerator {
     private static void copyFilesByRecursive(File inputFile, File outputFile) throws IOException {
         // 区分是文件还是目录
         if (inputFile.isDirectory()) {
+            System.out.println(inputFile.getName());
             File destOutputFile = new File(outputFile, inputFile.getName());
             // 如果是目录，先创建目录
             if (!destOutputFile.exists()) {
