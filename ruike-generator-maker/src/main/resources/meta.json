@@ -1,13 +1,14 @@
 {
   "name": "acm-template-pro-generator",
   "description": "ACM 示例模板生成器",
-  "basePackage": "com.yupi",
+  "basePackage": "com.laowu",
   "version": "1.0",
-  "author": "yupi",
-  "createTime": "2025-01-01",
+  "author": "laowu",
+  "createTime": "2025-01-02",
   "fileConfig": {
-    "inputRootPath": "D:/File/Javaproject/ruike-generator/ruike-generator-demo-projects/acm-template-pro",
-    "outputRootPath": "D:/File/Javaproject/ruike-generator/generated",
+    "inputRootPath": ".source/acm-template-pro",
+    "sourceRootPath": "D:/File/Javaproject/ruike-generator/ruike-generator-demo-projects/acm-template-pro",
+    "outputRootPath": "generated",
     "type": "dir",
     "files": [
       {
@@ -43,7 +44,7 @@
         "fieldName": "author",
         "type": "String",
         "description": "作者注释",
-        "defaultValue": "yupi",
+        "defaultValue": "laowu",
         "abbr": "a"
       },
       {
