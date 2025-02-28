@@ -79,11 +79,8 @@ public abstract class GenerateTemplate {
         String inputResourcePath = classPathResource.getAbsolutePath();
 
         // java包的基础路径
-        // com.yupi
         String outputBasePackage = meta.getBasePackage();
-        // com/yupi
         String outputBasePackagePath = StrUtil.join("/", StrUtil.split(outputBasePackage, "."));
-        // generated/src/main/java/com/yupi
         String outputBaseJavaPackagePath = outputPath + File.separator + "src/main/java/" + outputBasePackagePath;
 
         String inputFilePath;
@@ -140,9 +137,9 @@ public abstract class GenerateTemplate {
         DynamicFileGenerator.doGenerate(inputFilePath,outputFilePath, meta);
 
         // README.md
-        inputFilePath = inputResourcePath + File.separator + "templates/README.md.ftl";
-        outputFilePath = outputPath + File.separator + "README.md";
-        DynamicFileGenerator.doGenerate(inputFilePath,outputFilePath, meta);
+//        inputFilePath = inputResourcePath + File.separator + "templates/README.md.ftl";
+//        outputFilePath = outputPath + File.separator + "README.md";
+//        DynamicFileGenerator.doGenerate(inputFilePath,outputFilePath, meta);
     }
 
     protected String copySource(Meta meta, String outputPath) {
