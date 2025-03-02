@@ -1,6 +1,7 @@
 ### Custom template
 .idea
 generated
+.temp
 target
 ruike-generator.iml
 

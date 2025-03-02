@@ -1,6 +1,5 @@
 package com.yupi.maker.generator.file;
 
-import com.yupi.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;
@@ -12,16 +11,6 @@ import java.io.IOException;
  * @description: 动静结合，生成完整代码
  */
 public class FileGenerator {
-    public static void main(String[] args) throws TemplateException, IOException {
-        DataModel dataModel = new DataModel();
-
-        dataModel.setAuthor("laowu");
-        dataModel.setLoop(false);
-        dataModel.setOutputText("求和结果：");
-
-        doGenerate(dataModel);
-    }
-
     public static void doGenerate(Object model) throws IOException, TemplateException {
         String projectPath = System.getProperty("user.dir");
         // 项目根路径
