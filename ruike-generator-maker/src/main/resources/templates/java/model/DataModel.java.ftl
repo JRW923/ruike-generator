@@ -12,26 +12,26 @@ ${indent}public ${modelInfo.type} ${modelInfo.fieldName}<#if modelInfo.defaultVa
 </#macro>
 
 /**
-* 数据模型
-*/
+ * 数据模型
+ */
 @Data
 public class DataModel {
 <#list modelConfig.models as modelInfo>
 
-<#-- 有分组 -->
+    <#-- 有分组 -->
     <#if modelInfo.groupKey??>
     /**
-    * ${modelInfo.groupName}
-    */
+     * ${modelInfo.groupName}
+     */
     public ${modelInfo.type} ${modelInfo.groupKey} = new ${modelInfo.type}();
 
     /**
-    * ${modelInfo.description}
-    */
+     * ${modelInfo.description}
+     */
     @Data
     public static class ${modelInfo.type} {
     <#list modelInfo.models as modelInfo>
-        <@generateModel indent="        " modelInfo=modelInfo />
+    <@generateModel indent="        " modelInfo=modelInfo />
     </#list>
     }
 
