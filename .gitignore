@@ -4,6 +4,7 @@ generated
 .temp
 target
 ruike-generator.iml
+application-local.yml
 
 ### Java template
 # Compiled class file
